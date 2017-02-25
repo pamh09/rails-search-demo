@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Component:</strong>
+  <%= @backup.component_id %>
+</p>
+
+<p>
+  <strong>Backup medium:</strong>
+  <%= @backup.backup_medium_id %>
+</p>
+
+<%= link_to 'Edit', edit_backup_path(@backup) %> |
+<%= link_to 'Back', backups_path %>

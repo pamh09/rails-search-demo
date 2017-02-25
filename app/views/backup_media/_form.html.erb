@@ -1,0 +1,22 @@
+<%= form_for(backup_medium) do |f| %>
+  <% if backup_medium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(backup_medium.errors.count, "error") %> prohibited this backup_medium from being saved:</h2>
+
+      <ul>
+      <% backup_medium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
